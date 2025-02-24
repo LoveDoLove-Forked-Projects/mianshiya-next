@@ -146,6 +146,41 @@ declare namespace API {
     id?: number;
   };
 
+  type doLoginUsingDELETEParams = {
+    /** password */
+    password?: string;
+    /** username */
+    username?: string;
+  };
+
+  type doLoginUsingGETParams = {
+    /** password */
+    password?: string;
+    /** username */
+    username?: string;
+  };
+
+  type doLoginUsingPATCHParams = {
+    /** password */
+    password?: string;
+    /** username */
+    username?: string;
+  };
+
+  type doLoginUsingPOSTParams = {
+    /** password */
+    password?: string;
+    /** username */
+    username?: string;
+  };
+
+  type doLoginUsingPUTParams = {
+    /** password */
+    password?: string;
+    /** username */
+    username?: string;
+  };
+
   type getPostVOByIdUsingGETParams = {
     /** id */
     id?: number;
@@ -193,12 +228,17 @@ declare namespace API {
 
   type LoginUserVO = {
     createTime?: string;
+    email?: string;
+    expertiseDirection?: string;
+    grade?: string;
     id?: number;
+    phoneNumber?: string;
     updateTime?: string;
     userAvatar?: string;
     userName?: string;
     userProfile?: string;
     userRole?: string;
+    workExperience?: string;
   };
 
   type OrderItem = {
@@ -609,9 +649,13 @@ declare namespace API {
   type User = {
     createTime?: string;
     editTime?: string;
+    email?: string;
+    expertiseDirection?: string;
+    grade?: string;
     id?: number;
     isDelete?: number;
     mpOpenId?: string;
+    phoneNumber?: string;
     unionId?: string;
     updateTime?: string;
     userAccount?: string;
@@ -620,6 +664,7 @@ declare namespace API {
     userPassword?: string;
     userProfile?: string;
     userRole?: string;
+    workExperience?: string;
   };
 
   type UserAddRequest = {
@@ -627,6 +672,17 @@ declare namespace API {
     userAvatar?: string;
     userName?: string;
     userRole?: string;
+  };
+
+  type UserEditRequest = {
+    email?: string;
+    expertiseDirection?: string;
+    grade?: string;
+    phoneNumber?: string;
+    userAvatar?: string;
+    userName?: string;
+    userProfile?: string;
+    workExperience?: string;
   };
 
   type userLoginByWxOpenUsingGETParams = {

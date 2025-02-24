@@ -70,3 +70,11 @@ create table if not exists question_bank_question
     updateTime     datetime default CURRENT_TIMESTAMP not null on update CURRENT_TIMESTAMP comment '更新时间',
     UNIQUE (questionBankId, questionId)
 ) comment '题库题目' collate = utf8mb4_unicode_ci;
+
+-- 功能扩展：用户个人主页资料修改
+ALTER TABLE user
+    ADD phoneNumber VARCHAR(20) COMMENT '手机号',
+    ADD email VARCHAR(256) COMMENT '邮箱',
+    ADD grade VARCHAR(50) COMMENT '年级',
+    ADD workExperience VARCHAR(512) COMMENT '工作经验',
+    ADD expertiseDirection VARCHAR(512) COMMENT '擅长方向';
