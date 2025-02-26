@@ -61,6 +61,27 @@ public class AiManager {
         final ChatMessage userMessage = ChatMessage.builder().role(ChatMessageRole.USER).content(userPrompt).build();
         messages.add(systemMessage);
         messages.add(userMessage);
+        return doChat(messages, model);
+    }
+
+    /**
+     * 调用 AI 接口，获取响应字符串（允许传入自定义的消息列表，使用默认模型）
+     *
+     * @param messages
+     * @return
+     */
+    public String doChat(List<ChatMessage> messages) {
+        return doChat(messages, DEFAULT_MODEL);
+    }
+
+    /**
+     * 调用 AI 接口，获取响应字符串（允许传入自定义的消息列表）
+     *
+     * @param messages
+     * @param model
+     * @return
+     */
+    public String doChat(List<ChatMessage> messages, String model) {
         // 构造请求
         ChatCompletionRequest chatCompletionRequest = ChatCompletionRequest.builder()
 //                .model("deepseek-v3-241226")
