@@ -1,4 +1,4 @@
-# 24 年最新项目 - 面试刷题平台
+# 智能面试刷题平台项目（手把手带你做个面试鸭！）
 
 > 作者：[程序员鱼皮](https://yuyuanweb.feishu.cn/wiki/Abldw5WkjidySxkKxU2cQdAtnah)
 >
